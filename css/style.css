@@ -138,13 +138,13 @@ a {
   transition: all 0.3s;
 }
 
-/* .active {
+.active {
   color: orange;
 
-} */
+}
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: var(--Darker-Primary);
+  color: orange;
 }
 
 /* Section-hero */
@@ -650,10 +650,7 @@ hr {
 }
 
 /* section contact */
-.section-contact {
-  background: #000;
-  color: #c0c0c0;
-}
+
 .contacts {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -712,7 +709,8 @@ hr {
 
 .cards-links {
   padding: 4rem;
-  border-bottom: 1px solid #1f1f1e;
+
+
 }
 .cards-links .container {
   display: flex;
