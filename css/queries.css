@@ -1,0 +1,357 @@
+@media (min-width: 20em) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 46em) {
+  html {
+    font-size: 50%;
+  }
+
+  .main-nav-list {
+    display: none;
+  }
+
+  .header-parts {
+    height: 10vh;
+  }
+
+  .section-hero {
+    height: 40vh;
+  }
+  .header-parts {
+    max-width: 40rem;
+  }
+  /* mobile nav start */
+
+  .mobile-nav {
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    animation: mobileNavAnimation 0.5s;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    padding: 0.3rem;
+  }
+
+  /* mobile nav end */
+
+  .hero {
+    grid-template-columns: none;
+    max-width: 40rem;
+  }
+  .hero-text-box {
+    padding-top: 6rem;
+  }
+  .main-heading {
+    font-size: 2.5rem;
+  }
+  .secondary-heading {
+    font-size: 2rem;
+  }
+
+  .hero-image-box,
+  .hero-text {
+    display: none;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 0.9rem 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .services-boxes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .service-box {
+    max-width: 100%;
+    padding-top: 6rem;
+  }
+  .section-intro {
+    text-align: center;
+    padding: 6rem 0;
+  }
+
+  .heading-intro {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .text-intro {
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem;
+  }
+  .product {
+    margin: 1rem;
+  }
+
+  .sticker::before {
+    width: 3px;
+    height: 3px;
+    top: 6px;
+    right: 2.6rem;
+  }
+
+  .product-cart i {
+    font-size: 1.5rem;
+  }
+
+  .product-cart p {
+    font-size: 1.4rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .feature-image {
+    height: 35rem;
+  }
+  .section-testimonials .heading-intro {
+    font-size: 2.5rem;
+  }
+  .testimonials {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 1rem;
+  }
+  .testimonial {
+    height: 30rem;
+  }
+  .testimonial-text {
+    margin-top: 0;
+  }
+  .testimonial-bottom-text .job {
+    font-size: 1.3rem;
+  }
+  .offers {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 4rem 4rem 4rem;
+  }
+  .offer {
+    margin: 1rem auto;
+    width: 300px;
+  }
+  .offer-price {
+    font-size: 2rem;
+  }
+  .offer:nth-child(2)::after {
+    font-size: 1.6rem;
+    top: 2.1rem;
+    right: -5.1rem;
+  }
+  .offer-price span {
+    font-size: 5rem;
+  }
+  .offer-list-item:not(:first-child) {
+    padding-top: 0.9rem;
+  }
+
+  .contacts {
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 2rem;
+  }
+  .contact {
+    margin-bottom: 3rem;
+  }
+  .contact-title {
+    font-size: 3rem;
+  }
+  .contact-title::after {
+    display: none;
+  }
+  .contact-list-item {
+    font-size: 1.6rem;
+  }
+  .contact-list p {
+    font-size: 1.6rem;
+  }
+  .cards-links .container {
+    display: block;
+    text-align: center;
+  }
+  .card-logo {
+    margin-bottom: 6rem;
+    display: block;
+    font-size: 5rem;
+  }
+  .payment-cards {
+    margin-bottom: 4rem;
+    margin-left: 0;
+  }
+  .social-links {
+    margin-right: 0;
+  }
+  .social-link {
+    width: 5rem;
+    height: 4rem;
+  }
+  .footer .container {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  .footer-links {
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width: 46em) and (max-width: 66em) {
+  .container {
+    max-width: 90rem;
+    padding: 0 3rem;
+  }
+  html {
+    font-size: 58%;
+  }
+  .logo {
+    font-size: 4rem;
+  }
+
+  .hero {
+    padding-top: 2rem;
+  }
+
+  .hero-heading {
+    font-size: 3.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 0.9rem 3.5rem;
+    font-size: 1.7rem;
+    margin-top: 1rem;
+  }
+  .hero-img-mob {
+    width: 120%;
+    top: 3rem;
+    left: -2rem;
+  }
+  .hero-img-watch {
+    width: 115%;
+    top: 19rem;
+    right: 13.5rem;
+  }
+  .text-intro {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+  }
+  .services-boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .products {
+    padding: 0 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product:last-child {
+    display: none;
+  }
+  .sticker::before {
+    width: 3px;
+    height: 3px;
+    top: 7px;
+    right: 2.6rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonial {
+    height: 45rem;
+    padding: 4rem 2rem;
+  }
+  .testimonial-text {
+    margin-top: 0rem;
+  }
+  .testimonial-bottom-text .name {
+    font-size: 1.5rem;
+  }
+  .offers {
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 5rem;
+  }
+
+  .contacts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-list-item {
+    font-size: 1.5rem;
+  }
+  .contact-list p {
+    font-size: 1.5rem;
+  }
+
+  .payment-cards {
+    width: 30%;
+    margin-left: 10rem;
+  }
+  .social-links {
+    margin-right: 5rem;
+  }
+
+  .social-link {
+    width: 3.5rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 66em) and (max-width: 75em) {
+  .container {
+    max-width: 95rem;
+  }
+  html {
+    font-size: 57%;
+  }
+  .hero-img-mob {
+    width: 110%;
+    top: 3rem;
+    left: -2rem;
+  }
+  .hero-img-watch {
+    width: 100%;
+    top: 22rem;
+    right: 16.5rem;
+  }
+  .service-heading {
+    font-size: 2rem;
+  }
+  .service-text {
+    padding: 0 2rem;
+    font-size: 1.4rem;
+  }
+  .products {
+    padding: 2rem;
+  }
+  .testimonial {
+    height: 40rem;
+  }
+  .section-offers .container {
+    max-width: 120rem;
+  }
+  .offer {
+    width: 250px;
+  }
+}
