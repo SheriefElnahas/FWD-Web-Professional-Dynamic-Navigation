@@ -15,7 +15,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  outline: none;
 }
 
 body {
@@ -109,11 +108,12 @@ a {
   bottom: 0;
   right: 0;
   z-index: 500;
+  border-bottom:3px solid teal;
 }
 
 .header-parts .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 9rem;
 }
@@ -122,7 +122,7 @@ a {
   font-size: 4.5rem;
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.1rem;
 }
 
 .main-nav-list {
@@ -136,15 +136,19 @@ a {
   text-transform: uppercase;
   padding: 1rem 1rem 1rem 2rem;
   transition: all 0.3s;
+
+  margin: 0 0.5rem;
 }
 
 .active {
   color: orange;
 
+
 }
 .main-nav-link:hover,
 .main-nav-link:active {
   color: orange;
+
 }
 
 /* Section-hero */
@@ -709,8 +713,6 @@ hr {
 
 .cards-links {
   padding: 4rem;
-
-
 }
 .cards-links .container {
   display: flex;
