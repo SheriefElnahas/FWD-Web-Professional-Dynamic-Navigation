@@ -1,5 +1,5 @@
 // **************************************************************************************************************
-//                                   Dynamic Navigation Links Based On Sections 
+//                                   Dynamic Navigation Links Based On Sections
 // **************************************************************************************************************
 
 // Select Elements
@@ -27,8 +27,6 @@ buildNavbar();
 // Select the links after creating it dnyamically in JS
 const links = document.querySelectorAll(".main-nav-link");
 
-
-
 // **************************************************************************************************************
 //                                  Apply Active Class On Navbar Links
 // **************************************************************************************************************
@@ -48,72 +46,68 @@ const addActiveClass = (id) => {
   // Select that link by using the selector that we just built.
   const navLink = document.querySelector(selector);
   navLink.classList.add("active");
-
 };
 
-onscroll = function() {
+onscroll = function () {
   const scrollPosition = document.documentElement.scrollTop;
 
   sections.forEach((section) => {
-     // Figure out the boundries of the section 
-    if (scrollPosition >= section.offsetTop - 66 && scrollPosition < section.offsetTop + section.offsetHeight  ) {
-        //  Figure Out Which section we are currently on by getting the id 
-      const currentId = section.id
+    // Figure out the boundries of the section
+    if (
+      scrollPosition >= section.offsetTop - 66 &&
+      scrollPosition < section.offsetTop + section.offsetHeight
+    ) {
+      //  Figure Out Which section we are currently on by getting the id
+      const currentId = section.id;
 
       // Remove active class from all the links - then add active class to the link of the section that we are currently on.
       removeAllActiveClasses();
 
-      // Pass this id to add active function 
+      // Pass this id to add active function
       addActiveClass(currentId);
     }
   });
-}
-
-
+};
 
 // **************************************************************************************************************
 //                                          Apply Smoth Scroll
 // **************************************************************************************************************
 // Helper Function
 const smoothScroll = (target, duration) => {
-    // Extract the section that we want to navigation after clicking on the corresponding navigation linik
-    const location = document.querySelector(target);
-     // this wil lget the element relative position to the top of the screen
-    const targetPosition = location.getBoundingClientRect().top - 60;
+  // Extract the section that we want to navigation after clicking on the corresponding navigation linik
+  const location = document.querySelector(target);
+  // this wil lget the element relative position to the top of the screen
+  const targetPosition = location.getBoundingClientRect().top - 60;
 
-    // his is the position relative to the window object itself not the actual element
-    const currentPosition = window.scrollY;
-  
+  // his is the position relative to the window object itself not the actual element
+  const currentPosition = window.scrollY;
 
-    let startTime = null;
-  
-    const animation = currentTime => {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const run = ease(timeElapsed, currentPosition, targetPosition, duration);
-      window.scrollTo(0, run);
-      if (timeElapsed < duration) requestAnimationFrame(animation);
-    };
-  
-    // Ease Function
-    const ease = (t, b, c, d) => {
-      t /= d / 2;
-      if (t < 1) return (c / 2) * t * t + b;
-      t--;
-      return (-c / 2) * (t * (t - 2) - 1) + b;
-    };
-  
-    requestAnimationFrame(animation);
+  let startTime = null;
+
+  const animation = (currentTime) => {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, currentPosition, targetPosition, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
   };
-  
+
+  // Ease Function
+  const ease = (t, b, c, d) => {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  };
+
+  requestAnimationFrame(animation);
+};
+
 // Applying The Smooth Scroll Function To Each Link
-links.forEach(link => {
-    link.addEventListener('click', () => {
-
+links.forEach((link) => {
+  link.addEventListener("click", () => {
     // Extract section id
-      const sectionId = `#${link.textContent}`;
-      smoothScroll(sectionId, 1000);
-    });
+    const sectionId = `#${link.textContent}`;
+    smoothScroll(sectionId, 1000);
   });
-
-
+});
