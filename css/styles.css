@@ -130,17 +130,21 @@ a {
 .main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
+
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 1rem 1rem 1rem 2rem;
+ 
   transition: all 0.3s;
 
-  margin: 0 0.5rem;
+ margin:1rem 2rem;
+ padding-bottom:1rem;
+ border-bottom: 3px solid transparent;
 }
 
-.active {
+.main-nav-link.active {
   color: orange;
+  border-bottom:3px solid orange;
 }
 .main-nav-link:hover,
 .main-nav-link:active {
@@ -413,7 +417,7 @@ hr {
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding-bottom: 10rem;
+
 }
 
 .feature-image {

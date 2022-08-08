@@ -30,6 +30,7 @@ const links = document.querySelectorAll(".main-nav-link");
 // **************************************************************************************************************
 //                                  Apply Active Class On Navbar Links
 // **************************************************************************************************************
+let headerHeight = 0;
 
 // Removing Active Class Helper Function
 const removeAllActiveClasses = () => {
@@ -51,10 +52,12 @@ const addActiveClass = (id) => {
 onscroll = function () {
   const scrollPosition = document.documentElement.scrollTop;
 
+  // Extract header height based on the current veiw height
+  headerHeight = document.querySelector("header").clientHeight;
+
   sections.forEach((section) => {
-    // Figure out the boundries of the section
     if (
-      scrollPosition >= section.offsetTop - 66 &&
+      scrollPosition >= section.offsetTop - headerHeight - 5 &&
       scrollPosition < section.offsetTop + section.offsetHeight
     ) {
       //  Figure Out Which section we are currently on by getting the id
@@ -77,7 +80,7 @@ const smoothScroll = (target, duration) => {
   // Extract the section that we want to navigation after clicking on the corresponding navigation linik
   const location = document.querySelector(target);
   // this wil lget the element relative position to the top of the screen
-  const targetPosition = location.getBoundingClientRect().top - 60;
+  const targetPosition = location.getBoundingClientRect().top - headerHeight;
 
   // his is the position relative to the window object itself not the actual element
   const currentPosition = window.scrollY;
