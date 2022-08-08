@@ -14,30 +14,23 @@
     
     <link rel="icon" href="css/img/favicon.png">
 
-    <script defer src="app.js"></script>
+    <script defer src="js/app.js"></script>
     
 
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/queries.css">
 
     <title>Tshop - Selling Digital Products</title>
   </head>
   <body>
-    <header  class="header ">
-        <!-- <i class="fas fa-bars mobile-icon"></i> -->
-      <div class="header-parts sticky">
-        <div class="container">
+    <header class="header sticky">
+        <div class="container nav-container ">
           <a href="#" class="logo">Tshop</a>
+          <!-- <i class="fa-solid fa-bars nav-icon"></i> -->
           <nav class="main-nav">
-    
             <ul class="main-nav-list">
               <!-- <li><a class="main-nav-link" href="#home">Home</a></li>
-              <li><a class="main-nav-link" href="#services">Services</a></li>
-              <li><a class="main-nav-link" href="#products">Products</a></li>
-              <li><a class="main-nav-link" href="#features">Devices</a></li>
-              <li><a class="main-nav-link" href="#reviews">Reviews</a></li>
-              <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
               <li><a class="main-nav-link" href="#contact">Contact</a></li> -->
             </ul>
           </nav>
@@ -132,7 +125,7 @@
             <div class="product">
               <div class="product-image-box">
                 <span class="sticker sticker-new">New</span>
-                <div class="product-image product-image-1" role="img" loading="lazy" aria-label="Apple Series 6"></div> 
+                <a href="#">  <div class="product-image product-image-1" role="img" loading="lazy" aria-label="Apple Series 6"></div> </a>
               </div>
                   <div class="product-box">
                     <span class="product-stars">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
@@ -140,7 +133,7 @@
                     <span class="product-price">$150.00</span>
                     <hr>
                     <div class="product-cart">
-                      <p><i class="fa-solid fa-cart-plus"></i> Add to cart</p>
+                          <button class="btn-cart"><i class="fa-solid fa-cart-plus cart-link"></i> Add to cart</button>
                       <span><i class="fa-solid fa-shuffle"></i> <i class="fa-solid fa-heart"></i></span>
                     </div>
                   </div>
@@ -148,7 +141,7 @@
             <div class="product">
               <div class="product-image-box">
                 <span class="sticker sticker-new">New</span>
-                <div class="product-image product-image-2" role="img"  loading="lazy" aria-label="Samsung A12"></div> 
+                <a href="#"> <div class="product-image product-image-2" role="img"  loading="lazy" aria-label="Samsung A12"></div> </a>
               </div>
                   <div class="product-box">
                     <span class="product-stars">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
@@ -157,7 +150,7 @@
                     <span class="product-old-price">$120.00</span>
                     <hr>
                     <div class="product-cart">
-                      <p><i class="fa-solid fa-cart-plus"></i> Add to cart</p>
+                            <button class="btn-cart"><i class="fa-solid fa-cart-plus cart-link"></i> Add to cart</button>
                       <span><i class="fa-solid fa-shuffle"></i> <i class="fa-solid fa-heart"></i></span>
                     </div>
                   </div>
@@ -165,7 +158,7 @@
             <div class="product">
               <div class="product-image-box">
                 <span class="sticker sticker-sale">Sale</span>
-                <div class="product-image product-image-3" role="img" loading="lazy" aria-label="Anker A3028H11"></div> 
+                <a href="#"><div class="product-image product-image-3" role="img" loading="lazy" aria-label="Anker A3028H11"></div> </a>
               </div>
                   <div class="product-box">
                     <span class="product-stars">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
@@ -173,15 +166,15 @@
                     <span class="product-price">$90.00</span>
                     <hr>
                     <div class="product-cart">
-                      <p><i class="fa-solid fa-cart-plus"></i> Add to cart</p>
-                      <span><i class="ph-shuffle"></i> <i class="fa-solid fa-heart"></i></span>
+                     <button class="btn-cart"><i class="fa-solid fa-cart-plus cart-link"></i> Add to cart</button>
+                     <span><i class="fa-solid fa-shuffle"></i> <i class="fa-solid fa-heart"></i></span>
                     </div>
                   </div>
             </div>
             <div class="product">
               <div class="product-image-box">
                 <span class="sticker sticker-new">New</span>
-                <div class="product-image product-image-4" role="img" loading="lazy" aria-label="Apple Series 5"></div> 
+                <a href="#">   <div class="product-image product-image-4" role="img" loading="lazy" aria-label="Apple Series 5"></div> </a>
               </div>
                   <div class="product-box">
                     <span class="product-stars">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
@@ -189,7 +182,7 @@
                     <span class="product-price">$140.00</span>
                     <hr>
                     <div class="product-cart">
-                      <p><i class="ph-shopping-cart"></i> Add to cart</p>
+                      <button class="btn-cart"><i class="fa-solid fa-cart-plus cart-link"></i> Add to cart</button>
                       <span><i class="fa-solid fa-shuffle"></i> <i class="fa-solid fa-heart"></i></span>
                     </div>
                   </div>
@@ -244,43 +237,7 @@
         </div>
       </section>
 
-     <section class="section-testimonials" id="reviews">
-      <div class="section-intro">
-        <h2 class="heading-intro">Read What Other People Said About Us</h2>
-      </div>
-      <div class="testimonials container">
-        <div class="testimonial">
-          <p class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur et ipsum culpa beatae? Deleniti incidunt, distinctio sit quibusdam itaque sapiente exercitationem ut.</p>
-          <div class="testimonial-bottom">
-            <img height="60" width="60"  src="css/img/testimonials/Gojo Satoru.jpg"  loading="lazy" alt="Gojo Web Developer">
-            <div class="testimonial-bottom-text">
-              <p class="name">Gojo Satoru </p>
-              <p class="job">Web Developer</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <p class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur et ipsum culpa beatae? Deleniti incidunt, distinctio sit quibusdam itaque sapiente exercitationem ut.</p>
-          <div class="testimonial-bottom">
-              <img height="60" width="60" src="css/img/testimonials/Askeladd.jpg" loading="lazy"  alt="Askeladd Project Manager">
-            <div class="testimonial-bottom-text">
-              <p class="name">Askeladd Castus </p>
-              <p class="job">Project Manager</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <p class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur et ipsum culpa beatae? Deleniti incidunt, distinctio sit quibusdam itaque sapiente exercitationem ut.</p>
-          <div class="testimonial-bottom">
-            <img height="60" width="60" src="css/img/testimonials/Eren Yeager.jpg" loading="lazy" alt="Eren Yeager Web Desinger">
-            <div class="testimonial-bottom-text">
-              <p class="name">Eren Yeager</p>
-              <p class="job">Web Designer</p>
-            </div>
-          </div>
-        </div>
-      </div>
-     </section>
+    
 
      <section class="section-offers" id="pricing">
       <div class="section-intro">
@@ -340,6 +297,9 @@
     </section>
     </main>
     <footer class="footer">
+      <div class="container">
+
+ 
       <div class="contacts">
         <div class="contact">
           <p class="contact-title">My Account</p>
@@ -382,11 +342,9 @@
           </ul>
         </div>
       </div>
-      
+
       <div class="cards-links">
-        <div class="container">
           <div class="card-logo">Tshop</div> 
-         
             <img  class="payment-cards" width="192" height="27" src="css/img/cards.webp" loading="lazy" alt="Payment Cards">
             <div class="social-links">
               <a rel="noopener" href="https://twitter.com" aria-label="Facebook" target="_blank"><i class="fab fa-twitter social-link twitter"></i></a>
@@ -394,22 +352,24 @@
               <a rel="noopener" href="https://facebook.com" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f social-link facebook"></i></a>
               <a rel="noopener" href="https://youtube.com" aria-label="Facebook" target="_blank"><i class="fab fa-youtube social-link youtube"></i></a>
           </div>
-            </div
+  
       </div>
 
-      <div class="container">
-        <p>Copyright &copy; 2021 Tshop. All rights reserved.</p>
-        <div class="footer-links">
-          <ul class="footer-links">  
-            <li><a class="footer-link" href="#">Contact Us</a></li>
-            <li><a class="footer-link" href="#">Term of</a></li>
-            <li><a class="footer-link" href="#">User Privacy</a></li>
-            <li><a class="footer-link" href="#">Policy</a></li>
-            <li><a class="footer-link" href="#">Site Map</a></li>
-          </ul>
+        <div class="footer-info container">
+          <p>Copyright &copy; 2021 Tshop. All rights reserved.</p>
+          <div class="footer-links">
+            <ul class="footer-links">  
+              <li><a class="footer-link" href="#">Contact Us</a></li>
+              <li><a class="footer-link" href="#">Term of</a></li>
+              <li><a class="footer-link" href="#">User Privacy</a></li>
+              <li><a class="footer-link" href="#">Policy</a></li>
+              <li><a class="footer-link" href="#">Site Map</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      
+        
+  
+   
     </footer>
 
 

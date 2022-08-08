@@ -3,37 +3,48 @@
     overflow-x: hidden;
   }
 }
-
+/* From 200 to 460 */
 @media (min-width: 20em) and (max-width: 46em) {
   html {
     font-size: 50%;
   }
   .logo {
-    font-size:3.5rem;
-    margin-top:0.5rem;
+    font-size: 3.5rem;
+    margin: 0.5rem 6rem;
+    font-size: 3rem;
   }
+  /* .nav-icon {
+    color:#fff;
+    font-size:3rem;
+  } */
 
- 
-  .header-parts {
-    height: 10vh;
+  /* .main-nav-list {
+    display:none;
+  } */
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-nav-list {
+    padding: 1rem;
+  }
+  .main-nav-link {
+    font-size: 1.6rem;
   }
 
   .section-hero {
-    height: 40vh;
+    height: 50vh;
+    padding-top: 10rem;
   }
   .header-parts {
     max-width: 100%;
   }
   /* mobile nav start */
 
-  .header-parts .container {
-    justify-content: space-around;
-  }
-
   .main-nav-link:link,
   .main-nav-link:visited {
     padding: 0.1rem;
-    font-size:1.3rem;
+    font-size: 1.3rem;
   }
 
   /* mobile nav end */
@@ -45,18 +56,18 @@
   .hero-text-box {
     padding-top: 6rem;
   }
-  .main-heading {
-    font-size: 2.5rem;
-  }
+  .main-heading,
   .secondary-heading {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    line-height: 0;
   }
 
-  .hero-image-box,
-  .hero-text {
+  .hero-image-box {
     display: none;
   }
-
+  .hero-text {
+    width: 100%;
+  }
   .btn,
   .btn:link,
   .btn:visited {
@@ -115,22 +126,7 @@
   .feature-image {
     height: 35rem;
   }
-  .section-testimonials .heading-intro {
-    font-size: 2.5rem;
-  }
-  .testimonials {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 0 1rem;
-  }
-  .testimonial {
-    height: 30rem;
-  }
-  .testimonial-text {
-    margin-top: 0;
-  }
-  .testimonial-bottom-text .job {
-    font-size: 1.3rem;
-  }
+
   .offers {
     grid-template-columns: repeat(1, 1fr);
     padding: 0 4rem 4rem 4rem;
@@ -167,18 +163,24 @@
   .contact-title::after {
     display: none;
   }
+  .contact-list {
+    margin-left: 32%;
+    width: 220px;
+    text-align: left;
+  }
   .contact-list-item {
     font-size: 1.6rem;
   }
   .contact-list p {
     font-size: 1.6rem;
   }
-  .cards-links .container {
-    display: block;
+  .cards-links {
+    display: flex;
+    flex-direction: column;
     text-align: center;
   }
   .card-logo {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
     display: block;
     font-size: 5rem;
   }
@@ -204,6 +206,23 @@
   }
 }
 
+@media (max-width: 520px) and (min-height: 800px) {
+  /* .container {
+    background:teal;
+  } */
+  .section-hero {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 920px) and (min-height: 1000px) {
+  /* .container {
+    background:teal;
+  } */
+  .section-hero {
+    height: 50vh;
+  }
+}
 @media (min-width: 46em) and (max-width: 66em) {
   .container {
     max-width: 90rem;
@@ -224,6 +243,7 @@
     font-size: 3.2rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    line-height: 1.3;
   }
 
   .btn,
@@ -269,16 +289,7 @@
   .features {
     grid-template-columns: repeat(2, 1fr);
   }
-  .testimonial {
-    height: 45rem;
-    padding: 4rem 2rem;
-  }
-  .testimonial-text {
-    margin-top: 0rem;
-  }
-  .testimonial-bottom-text .name {
-    font-size: 1.5rem;
-  }
+
   .offers {
     grid-template-columns: repeat(2, 1fr);
     padding-bottom: 5rem;
@@ -317,20 +328,23 @@
 
 @media (min-width: 66em) and (max-width: 75em) {
   .container {
-    max-width: 95rem;
+    max-width: 110rem;
   }
   html {
     font-size: 57%;
   }
   .hero-img-mob {
-    width: 110%;
+    width: 100%;
     top: 3rem;
     left: -2rem;
   }
   .hero-img-watch {
-    width: 100%;
+    width: 95%;
     top: 22rem;
     right: 16.5rem;
+  }
+  .hero-text {
+    margin-bottom: 5rem;
   }
   .service-heading {
     font-size: 2rem;
@@ -342,9 +356,7 @@
   .products {
     padding: 2rem;
   }
-  .testimonial {
-    height: 40rem;
-  }
+
   .section-offers .container {
     max-width: 120rem;
   }
