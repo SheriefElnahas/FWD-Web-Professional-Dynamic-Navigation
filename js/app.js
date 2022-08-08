@@ -1,4 +1,7 @@
-// *************************************** Dynamic Navigation Links Based On Sections ( Start ) *************************
+// **************************************************************************************************************
+//                                   Dynamic Navigation Links Based On Sections 
+// **************************************************************************************************************
+
 // Select Elements
 const sections = document.querySelectorAll("section");
 const ulElement = document.querySelector(".main-nav-list");
@@ -24,10 +27,12 @@ buildNavbar();
 // Select the links after creating it dnyamically in JS
 const links = document.querySelectorAll(".main-nav-link");
 
-// *************************************** Dynamic Navigation Links Based On Sections ( End ) *************************
 
 
-// *************************************** Apply Active Class On Navbar Links ( Start ) ********************************
+// **************************************************************************************************************
+//                                  Apply Active Class On Navbar Links
+// **************************************************************************************************************
+
 // Removing Active Class Helper Function
 const removeAllActiveClasses = () => {
   document.querySelectorAll(".main-nav-link").forEach((link) => {
@@ -64,11 +69,11 @@ onscroll = function() {
   });
 }
 
-// *************************************** Apply Active Class On Navbar Links ( End ) ********************************
 
 
-
-// *************************************** Apply Smooth Scroll ( Start ) ********************************
+// **************************************************************************************************************
+//                                          Apply Smoth Scroll
+// **************************************************************************************************************
 // Helper Function
 const smoothScroll = (target, duration) => {
     // Extract the section that we want to navigation after clicking on the corresponding navigation linik
@@ -112,4 +117,3 @@ links.forEach(link => {
   });
 
 
-// *************************************** Apply Smooth Scroll ( End ) ********************************
