@@ -29,6 +29,15 @@ button {
   font-family: inherit;
 }
 
+section.active {
+  opacity: 0.8;
+  border:3px solid teal;
+  border-top:1.5px solid teal;
+  border-bottom:3px solid teal;
+  border-right:3px solid teal;
+  border-left:3px solid teal;
+}
+
 .btn-primary:link,
 .btn-primary:visited {
   background: var(--Darker-Primary);
@@ -142,7 +151,7 @@ a {
  border-bottom: 3px solid transparent;
 }
 
-.main-nav-link.active {
+.main-nav-link.active-btn {
   color: orange;
   border-bottom:3px solid orange;
 }

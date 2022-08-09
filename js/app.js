@@ -35,7 +35,7 @@ let headerHeight = 0;
 // Removing Active Class Helper Function
 const removeAllActiveClasses = () => {
   document.querySelectorAll(".main-nav-link").forEach((link) => {
-    link.classList.remove("active");
+    link.classList.remove("active-btn");
   });
 };
 
@@ -46,7 +46,7 @@ const addActiveClass = (id) => {
 
   // Select that link by using the selector that we just built.
   const navLink = document.querySelector(selector);
-  navLink.classList.add("active");
+  navLink.classList.add("active-btn");
 };
 
 onscroll = function () {
@@ -63,11 +63,14 @@ onscroll = function () {
       //  Figure Out Which section we are currently on by getting the id
       const currentId = section.id;
 
+
       // Remove active class from all the links - then add active class to the link of the section that we are currently on.
       removeAllActiveClasses();
+      section.classList.remove('active');
 
       // Pass this id to add active function
       addActiveClass(currentId);
+      section.classList.add('active')
     }
   });
 };
